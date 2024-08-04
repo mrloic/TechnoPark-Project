@@ -65,8 +65,17 @@ class Object(db.Model):
     recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
     room_number = db.Column(db.String(50), nullable=False)
 
+    def __init__(self, object_name, type, buy_date, break_count, recovery_date, room_number):
+        self.object_name = object_name
+        self.type = type
+        self.buy_date = buy_date
+        self.break_count = break_count
+        self.recovery_date = recovery_date
+        self.room_number = room_number
+
 class RecoveryHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     description = db.Column(db.Text, nullable=True)
     employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
-    recovery_date = db.Column()
+    recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
+    total_time = db.Column(db.DateTime, default=datetime.utcnow)
