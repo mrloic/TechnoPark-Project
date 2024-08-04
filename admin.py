@@ -1,10 +1,12 @@
 from flask import redirect, url_for, request
 from flask_admin import Admin, AdminIndexView, expose
 from flask_admin.contrib.sqla import ModelView
-from flask_login import current_user, login_required
+from flask_login import current_user
 
-from app import app, db
-from models import User, Message
+from app import app
+
+
+# from models import User, Message
 
 
 class MyAdminIndexView(AdminIndexView):
@@ -17,8 +19,9 @@ class MyAdminIndexView(AdminIndexView):
 
     @expose('/')
     def index(self):
-        users = User.query.all()
-        return self.render('admin/index.html', users=users)
+        pass
+        # users = User.query.all()
+        # return self.render('admin/index.html', users=users)
 
 
 class UserAdmin(ModelView):
@@ -40,9 +43,10 @@ class UserAdmin(ModelView):
 
     @expose('/')
     def index(self):
-        messages = Message.query.order_by(Message.timestamp.desc()).all()
-        users = User.query.all()
-        return self.render('admin/user_view.html', users=users)
+        pass
+        # messages = Message.query.order_by(Message.timestamp.desc()).all()
+        # users = User.query.all()
+        # return self.render('admin/user_view.html', users=users)
 
 
 class MessageAdmin(ModelView):
@@ -63,11 +67,12 @@ class MessageAdmin(ModelView):
 
     @expose('/')
     def index(self):
-        messages = Message.query.order_by(Message.timestamp.desc()).all()
-        users = User.query.all()
-        return self.render('admin/message_view.html', messages=messages)
+        pass
+        # messages = Message.query.order_by(Message.timestamp.desc()).all()
+        # users = User.query.all()
+        # return self.render('admin/message_view.html', messages=messages)
 
 
 admin = Admin(app, name='MyAdmin', index_view=MyAdminIndexView(), template_mode='bootstrap4')
-admin.add_view(UserAdmin(User, db.session, name='Users'))
-admin.add_view(MessageAdmin(Message, db.session, name='Messages'))
+# admin.add_view(UserAdmin(User, db.session, name='Users'))
+# admin.add_view(MessageAdmin(Message, db.session, name='Messages'))

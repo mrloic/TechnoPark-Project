@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b310a4b-9329-4631-83ed-050f9e2cf694" name="Changes" comment="da">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="3b310a4b-9329-4631-83ed-050f9e2cf694" name="Changes" comment="comment lishnee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +78,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Start.executor": "Run",
     "Python.app.executor": "Run",
     "Python.config.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/deck/PycharmProjects/technoPark/app.py",
-    "settings.editor.selected.configurable": "settings.codegpt.services.openai"
+    "settings.editor.selected.configurable": "settings.codegpt.configuration"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -195,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722781847783</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="comment lishnee">
+      <option name="closed" value="true" />
+      <created>1722788072978</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722788072978</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +252,8 @@
     <MESSAGE value="last base" />
     <MESSAGE value="Merge pull request #4 from mrloic/loic&#10;&#10;Loic" />
     <MESSAGE value="da" />
-    <option name="LAST_COMMIT_MESSAGE" value="da" />
+    <MESSAGE value="comment lishnee" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment lishnee" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
