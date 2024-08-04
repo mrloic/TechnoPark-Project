@@ -64,3 +64,9 @@ class Object(db.Model):
     break_count = db.Column(db.Integer, nullable=False)
     recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
     room_number = db.Column(db.String(50), nullable=False)
+
+class RecoveryHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    description = db.Column(db.Text, nullable=True)
+    employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
+    recovery_date = db.Column()
