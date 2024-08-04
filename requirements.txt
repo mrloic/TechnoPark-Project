@@ -1,0 +1,11 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.1
+Flask-Login==0.6.3
+psycopg2-binary==2.9.9
+Werkzeug==3.0.3
+email_validator==2.1.2
+flask_migrate==4.0.7
+flask_admin==1.6.1
+Flask-Babel==4.0.0
+Flask-Security==3.0.0
