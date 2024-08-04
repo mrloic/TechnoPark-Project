@@ -1,6 +1,8 @@
-from app import db
-from flask_login import UserMixin
 from datetime import datetime
+
+from flask_login import UserMixin
+
+from app import db
 
 
 class Employee(db.Model, UserMixin):
@@ -75,7 +77,7 @@ class Object(db.Model):
         self.room_number = room_number
 
 
-class Breaks(db.Model):
+class Break(db.Model):
     break_types = db.Column(db.String(50), unique=False, nullable=False)
 
     def __init__(self, break_types):
