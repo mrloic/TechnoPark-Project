@@ -72,3 +72,6 @@ class Object(db.Model):
         self.break_count = break_count
         self.recovery_date = recovery_date
         self.room_number = room_number
+
+
+
