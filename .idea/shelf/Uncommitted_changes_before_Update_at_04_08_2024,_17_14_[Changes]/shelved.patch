@@ -6,10 +6,17 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
 diff --git a/.idea/workspace.xml b/.idea/workspace.xml
---- a/.idea/workspace.xml	(revision 5436af053c552f1f3591e32d903420a8603dbfc3)
-+++ b/.idea/workspace.xml	(date 1722773221949)
-@@ -20,18 +20,18 @@
+--- a/.idea/workspace.xml	(revision 622f814d46699dafdd378b1f4184a19ab1ee6b0d)
++++ b/.idea/workspace.xml	(date 1722773571765)
+@@ -18,20 +18,25 @@
+     </option>
+   </component>
    <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="loic" />
++      </map>
++    </option>
      <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
    </component>
 -  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -37,3 +44,20 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
    <component name="ProjectColorInfo">{
    &quot;associatedIndex&quot;: 8
  }</component>
+@@ -97,7 +102,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1722771607364</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="da">
++      <option name="closed" value="true" />
++      <created>1722773558248</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1722773558249</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">

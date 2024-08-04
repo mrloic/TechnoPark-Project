@@ -44,7 +44,8 @@ class Task(db.Model):
     employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
     image = db.Column(db.String(100))
 
-    def __init__(self, work_number, from_whom_id, description, send_time, time_limit, total_time, status, employee_id, image):
+    def __init__(self, work_number, from_whom_id, description, send_time, time_limit, total_time, status, employee_id,
+                 image):
         self.work_number = work_number
         self.from_whom_id = from_whom_id
         self.description = description
@@ -73,6 +74,14 @@ class Object(db.Model):
         self.recovery_date = recovery_date
         self.room_number = room_number
 
+
+class Breaks(db.Model):
+    break_types = db.Column(db.String(50), unique=False, nullable=False)
+
+    def __init__(self, break_types):
+        self.break_types = break_types
+
+
 class RecoveryHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     description = db.Column(db.Text, nullable=True)
@@ -80,3 +89,8 @@ class RecoveryHistory(db.Model):
     recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
     total_time = db.Column(db.DateTime, default=datetime.utcnow)
 
+    def __init__(self, description, employee_id, recovery_date, total_time):
+        self.description = description
+        self.employee_id = employee_id
+        self.recovery_date = recovery_date
+        self.total_time = total_time
