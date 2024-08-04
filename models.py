@@ -79,3 +79,4 @@ class RecoveryHistory(db.Model):
     employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
     recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
     total_time = db.Column(db.DateTime, default=datetime.utcnow)
+
