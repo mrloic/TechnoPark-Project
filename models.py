@@ -73,5 +73,9 @@ class Object(db.Model):
         self.recovery_date = recovery_date
         self.room_number = room_number
 
-
-
+class RecoveryHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    description = db.Column(db.Text, nullable=True)
+    employee_id = db.Column(db.Integer, db.ForeignKey('employee.id'), nullable=True)
+    recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
+    total_time = db.Column(db.DateTime, default=datetime.utcnow)
