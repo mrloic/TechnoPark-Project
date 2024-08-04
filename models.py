@@ -64,3 +64,11 @@ class Object(db.Model):
     break_count = db.Column(db.Integer, nullable=False)
     recovery_date = db.Column(db.DateTime, default=datetime.utcnow)
     room_number = db.Column(db.String(50), nullable=False)
+
+    def __init__(self, object_name, type, buy_date, break_count, recovery_date, room_number):
+        self.object_name = object_name
+        self.type = type
+        self.buy_date = buy_date
+        self.break_count = break_count
+        self.recovery_date = recovery_date
+        self.room_number = room_number
