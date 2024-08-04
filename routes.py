@@ -1,16 +1,15 @@
-from flask import render_template, redirect, url_for, flash, request, jsonify
-from app import app, db, login_manager
-from models import User, Message
-#from forms import RegistrationForm, LoginForm, MessageForm, UpdateUsernameForm, SettingsForm
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user, current_user, logout_user, login_required
-import os
-from werkzeug.utils import secure_filename
+from flask import render_template, redirect, url_for
+# from models import User, Message
+# from forms import RegistrationForm, LoginForm, MessageForm, UpdateUsernameForm, SettingsForm
+from flask_login import current_user, logout_user, login_required
+
+from app import app, login_manager
 
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    pass
+    # return User.query.get(int(user_id))
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -55,6 +54,8 @@ def logout():
 @login_required
 def chat():
     pass
+
+
 #     message_form = MessageForm()
 #     if message_form.validate_on_submit():
 #         image = message_form.image.data
@@ -83,26 +84,28 @@ def chat():
 @app.route('/get_messages', methods=['GET'])
 @login_required
 def get_messages():
-    messages = Message.query.filter(
-        (Message.receiver_id == current_user.id) | (Message.sender_id == current_user.id)
-    ).all()
-    messages_data = [{
-        'sender': message.sender.username,
-        'receiver': message.receiver.username,
-        'text': message.text,
-        'image': message.image
-    } for message in messages]
-    return jsonify(messages_data)
+    pass
+    # messages = Message.query.filter(
+    #     (Message.receiver_id == current_user.id) | (Message.sender_id == current_user.id)
+    # ).all()
+    # messages_data = [{
+    #     'sender': message.sender.username,
+    #     'receiver': message.receiver.username,
+    #     'text': message.text,
+    #     'image': message.image
+    # } for message in messages]
+    # return jsonify(messages_data)
 
 
 @app.route('/clear_messages', methods=['POST'])
 @login_required
 def clear_messages():
-    Message.query.filter(
-        (Message.receiver_id == current_user.id) | (Message.sender_id == current_user.id)
-    ).delete()
-    db.session.commit()
-    return '', 204
+    pass
+    # Message.query.filter(
+    #     (Message.receiver_id == current_user.id) | (Message.sender_id == current_user.id)
+    # ).delete()
+    # db.session.commit()
+    # return '', 204
 
 
 @app.route('/settings', methods=['GET', 'POST'])
@@ -134,34 +137,37 @@ def settings():
 @app.route('/admin')
 @login_required
 def admin_dashboard():
-    if not current_user.is_admin():
-        return redirect(url_for('chat'))
-    users = User.query.all()
-    return redirect(url_for('admin.index'))
+    pass
+    # if not current_user.is_admin():
+    #     return redirect(url_for('chat'))
+    # users = User.query.all()
+    # return redirect(url_for('admin.index'))
 
 
 @app.route('/admin/make_admin/<int:user_id>')
 @login_required
 def make_admin(user_id):
-    if not current_user.is_admin():
-        return redirect(url_for('chat'))
-    user = User.query.get(user_id)
-    if user:
-        user.admin = True
-        db.session.commit()
-    return redirect(url_for('admin.index'))
+    pass
+    # if not current_user.is_admin():
+    #     return redirect(url_for('chat'))
+    # user = User.query.get(user_id)
+    # if user:
+    #     user.admin = True
+    #     db.session.commit()
+    # return redirect(url_for('admin.index'))
 
 
 @app.route('/admin/remove_admin/<int:user_id>')
 @login_required
 def remove_admin(user_id):
-    if not current_user.is_admin():
-        return redirect(url_for('chat'))
-    user = User.query.get(user_id)
-    if user:
-        user.admin = False
-        db.session.commit()
-    return redirect(url_for('admin.index'))
+    pass
+    # if not current_user.is_admin():
+    #     return redirect(url_for('chat'))
+    # user = User.query.get(user_id)
+    # if user:
+    #     user.admin = False
+    #     db.session.commit()
+    # return redirect(url_for('admin.index'))
 
 
 @app.errorhandler(401)

@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b310a4b-9329-4631-83ed-050f9e2cf694" name="Changes" comment="da">
-      <change afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/alembic.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations_old/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations_old/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +81,9 @@
     "Python.app.executor": "Run",
     "Python.config.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "loic",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/deck/PycharmProjects/technoPark/app.py",
-    "settings.editor.selected.configurable": "CodeWithMe"
+    "settings.editor.selected.configurable": "settings.codegpt.services.openai"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -248,6 +241,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="dsaa" />
     <MESSAGE value="last base" />
+    <MESSAGE value="Merge pull request #4 from mrloic/loic&#10;&#10;Loic" />
     <MESSAGE value="da" />
     <option name="LAST_COMMIT_MESSAGE" value="da" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
